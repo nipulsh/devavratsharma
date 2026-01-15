@@ -88,22 +88,20 @@ export default function Home() {
           </motion.p>
 
           <div className="flex gap-6 mt-12">
-            <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-white text-black font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors clip-path-slant"
-                style={{ clipPath: 'polygon(10% 0, 100% 0, 90% 100%, 0% 100%)' }}
-            >
-                Get Started
-            </motion.button>
-            <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-white/30 text-white font-bold uppercase tracking-widest hover:bg-white/10 transition-colors"
-                style={{ clipPath: 'polygon(10% 0, 100% 0, 90% 100%, 0% 100%)' }}
-            >
-                View Demo
-            </motion.button>
+             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+               <a 
+                 href="https://teachablemachine.withgoogle.com/models/7sH_Vf6rb/" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 className="relative px-8 py-4 bg-primary-purple text-white font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300 clip-path-slant group flex items-center gap-2"
+               >
+                 <span>Get Started</span>
+                 <span className="group-hover:translate-x-1 transition-transform">→</span>
+               </a>
+               <button className="px-8 py-4 border border-white/30 text-white font-mono uppercase tracking-widest hover:bg-white/10 transition-colors clip-path-slant">
+                 View Documentation
+               </button>
+            </div>
           </div>
 
           {/* Floating Stats/Badges */}
